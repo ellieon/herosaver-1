@@ -1,10 +1,7 @@
 // ==UserScript==
 // @name     HeroSaver for HeroForge
 // @version  1
-// @description  Automatically load HeroSaver when visiting HeroForge
-// @namespace https://github.com/christofsteel/herosaver
-// @match  https://www.heroforge.com/
-// @grant        none
+// @match  https://www.heroforge.com/*
 // ==/UserScript==
 
 (function() {
@@ -22,7 +19,7 @@
             })) {
                 observer.disconnect();
                 var xhr=new XMLHttpRequest;
-                xhr.open("get","https://raw.githubusercontent.com/christofsteel/herosaver/master/herosaver.min.js",true);
+                xhr.open("get","https://raw.githubusercontent.com/ellieon/herosaver-1/master/herosaver.js",true);
                 xhr.onreadystatechange=function(){
                     if (xhr.readyState == 4) {
                         var script=document.createElement("script");
